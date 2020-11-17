@@ -14,24 +14,9 @@
 		return $temp;
 	}
 	/**
-	 * @param $xml string
+	 * @param $bid string
 	 */
-	/*private function updateXml(string $xml): string {
-		$i = 0;
-		foreach($xml->newsListItem as $key) {
-			$id = $key->id;
-			$content = $this->parseFeed($id);
-			$xml->newsListItem[$i]->addChild('content',htmlspecialchars($content->text));
-			$i++;
-		}
-		//convert simple xml object to straight xml here
-		$doc = new DOMDocument();
-		$doc->formatOutput = TRUE;
-		$doc->loadXML($xml->asXML());
-		$fxml = $doc->saveXML();
-		echo $fxml;
-	}*/
-	private function parseFeed($bid): string {
+	private function parseFeed(string $bid): string {
 		$addContent = simplexml_load_file($_POST['feed-url'].'/news/'.$bid);
 		return $addContent;
 	}
