@@ -24,7 +24,6 @@ endif;
 </head>
 <body>
 	<h1>Full Feed Generator</h1>
-	<?php echo $_SERVER['DOCUMENT_ROOT'] ?>
 	<form action="<?php echo $_SERVER['REQUEST_URI'];?>" method="post">
 		<input type="text" name="feed-url" placeholder="feed url"/><br/>
 		<input type="text" name="feed-file" placeholder="name of archive file xxxx.xml"/><br />
