@@ -28,7 +28,5 @@
 		}
 		return $tmp;
 	}
-	private function retrieveFullArticle(){
-	}
 }
 ?>
